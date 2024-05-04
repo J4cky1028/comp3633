@@ -15,4 +15,4 @@ def pyjail():
         if word in method:
             print('You can\'t escape from HKUST, you GG.')
             return
-    eval(method)
+    eval(method, {"__builtins__": {"print": print}},{"__builtins__": {}})
